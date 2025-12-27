@@ -72,8 +72,8 @@
         }
 
         render() {
-            const text = this.textContent.trim();
-            this.textContent = "";
+            const html = this.innerHTML.trim();
+            this.innerHTML = "";
 
             this.shadowRoot.innerHTML = `
 <style>
@@ -114,7 +114,7 @@
                 const span = document.createElement("span");
                 span.className = "ScrollVelocity-item";
                 span.setAttribute("part", span.className);
-                span.textContent = text;
+                span.innerHTML = html;
                 this.track.appendChild(span);
             }
 
